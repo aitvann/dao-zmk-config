@@ -23,9 +23,16 @@
       bindings = <&kp>, <&kp>;
     };
 
-    smartreset: smartreset {
+    resetmain: resetmain {
       compatible = "zmk,behavior-tap-dance";
-      label = "SMARTRESET";
+      label = "RESETMAIN";
+      #binding-cells = <0>;
+      bindings = <&sys_reset>, <&bootloader>;
+    };
+
+    resetslave: resetslave {
+      compatible = "zmk,behavior-tap-dance";
+      label = "RESETSLAVE";
       #binding-cells = <0>;
       bindings = <&sys_reset>, <&bootloader>;
     };
@@ -79,16 +86,16 @@
 
     raise {
       bindings = <
-&kp ESCAPE  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5         &kp N6    &kp N7            &kp N8  &kp N9     &kp N0  &kp DEL
-&trans      &kp N4  &kp N5  &kp N6  &kp PG_DN  &kp PG_UP      &kp LEFT  &kp DOWN          &kp UP  &kp RIGHT  &trans  &trans
-&trans      &kp N7  &kp N8  &kp N9  &kp N0     &smartreset    &trans    &kp LEFT_BRACKET  &kp F   &kp G      &trans  &trans
-                            &trans  &trans     &trans         &trans    &mo 3             &trans
+&kp ESCAPE  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5        &kp N6    &kp N7            &kp N8  &kp N9     &kp N0  &kp DEL
+&trans      &kp N4  &kp N5  &kp N6  &kp PG_DN  &kp PG_UP     &kp LEFT  &kp DOWN          &kp UP  &kp RIGHT  &trans  &trans
+&trans      &kp N7  &kp N8  &kp N9  &kp N0     &resetmain    &trans    &kp LEFT_BRACKET  &kp F   &kp G      &trans  &trans
+                            &trans  &trans     &trans        &trans    &mo 3             &trans
       >;
     };
 
     lower {
       bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &smartreset
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &resetslave
 &kp F1  &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp MINUS  &kp EQUAL  &trans           &trans                &kp BSLH               &kp GRAVE
 &kp F7  &kp F8    &kp F9  &kp F10   &kp F12   &kp F12      &kp UNDER  &kp PLUS   &trans           &trans                &kp PIPE               &kp TILDE
                           &trans    &mo 3     &trans       &trans     &trans     &trans
