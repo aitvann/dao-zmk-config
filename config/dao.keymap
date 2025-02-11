@@ -57,22 +57,22 @@
       key-positions = <28 27>;
     };
 
-    plus {
+    plus-symbol {
       bindings = <&kp PLUS>;
       key-positions = <18 19>;
     };
 
-    minus {
-      bindings = <&kp MINUS>;
-      key-positions = <16 17>;
-    };
-
-    equal {
+    equal-symbol {
       bindings = <&kp EQUAL>;
       key-positions = <30 31>;
     };
 
-    underscore {
+    dash-symbol {
+      bindings = <&kp MINUS>;
+      key-positions = <16 17>;
+    };
+
+    underscore-symbol {
       bindings = <&kp UNDERSCORE>;
       key-positions = <28 29>;
     };
