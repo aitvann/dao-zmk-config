@@ -59,22 +59,22 @@
 
     plus-symbol {
       bindings = <&kp PLUS>;
-      key-positions = <18 19>;
+      key-positions = <20 21>;
     };
 
     equal-symbol {
       bindings = <&kp EQUAL>;
-      key-positions = <30 31>;
+      key-positions = <32 33>;
     };
 
     dash-symbol {
       bindings = <&kp MINUS>;
-      key-positions = <16 17>;
+      key-positions = <14 15>;
     };
 
     underscore-symbol {
       bindings = <&kp UNDERSCORE>;
-      key-positions = <28 29>;
+      key-positions = <26 27>;
     };
   };
 
